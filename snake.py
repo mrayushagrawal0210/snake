@@ -2,7 +2,7 @@ import curses
 from curses import KEY_RIGHT, KEY_LEFT, KEY_UP, KEY_DOWN
 from random import randint
 
-curses.initscr() #initialize
+curses.initscr() 
 window = curses.newwin(30, 60, 0, 0) #create new window H=30, W=60
 window.keypad(True) #enable keypad
 curses.noecho() #turn off automatic echoing of keys to the screen
@@ -38,7 +38,7 @@ while key != 27: # While they Esc key is not pressed
     if snake[0][0] == 0 or snake[0][0] == 29 or snake[0][1] == 0 or snake[0][1] == 59: break
 
     #Exit if snake runs over itself
-    if snake[0] in snake[1:]: break
+    if snake[0] in snake[2:]: break
 
     # When snake eats the food
     if snake[0] == food:                                            
